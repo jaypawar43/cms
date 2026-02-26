@@ -1,8 +1,8 @@
-// frontend/src/services/api.js
+// frontend/src/api/axios.js
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://cms-gzq3.onrender.com/api",
+  baseURL: import.meta.env.VITE_API_URL || "http://localhost:5000/api",
 });
 
 // Add token to requests if it exists
